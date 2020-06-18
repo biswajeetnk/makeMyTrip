@@ -40,6 +40,7 @@ public class loginUser
 		return wd.findElement(loginViaPwd);
 	}
 	
+	//click login button
 	public WebElement clickLoginBtn()
 	{
 		return wd.findElement(loginBtn);
