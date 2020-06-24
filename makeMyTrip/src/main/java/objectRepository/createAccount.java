@@ -10,8 +10,8 @@ public class createAccount
 {
 	WebDriver wd;
 	
-	By clickCreateAcocunt = By.cssSelector("li[class*='lhUser']"); //this needs to be updated with custom xpath
-	By clickCreateNewAcct = By.cssSelector("a.latoBlack");
+	By clickCreateAcocunt = By.xpath("//label[text()='Login with Phone/Email']"); //this needs to be updated with custom xpath
+	By clickCreateNewAcct = By.xpath("//button[@class='capText font16']//child::span[text()='Continue']");
 	By enterMobileNumber = By.id("emailOrPhone");
 	By enterPassword = By.id("password");
 	By checkBox = By.id("tnc");

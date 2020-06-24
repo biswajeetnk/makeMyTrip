@@ -18,7 +18,7 @@ public class baseClass
 	public WebDriver initialiseDrivers() throws IOException
 	{
 		prop = new Properties();
-		FileInputStream file = new FileInputStream("C:\\Users\\Biswajeet Nayak\\git\\MakeMyTrip\\makeMyTrip\\src\\main\\java\\travelSite\\data.properties");
+		FileInputStream file = new FileInputStream("C:\\Users\\Biswajeet Nayak\\eclipse-workspace\\makeMyTrip\\makeMyTrip\\src\\main\\java\\travelSite\\data.properties");
 		prop.load(file);
 		
 		String browserName = prop.getProperty("browserUsed");

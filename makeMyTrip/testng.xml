@@ -3,10 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testCases.testCase1"/>
+      <!--class name="testCases.testCase1"/>
       <class name="testCases.testCase2"/>
       <class name="testCases.testCase3"/>
-      <class name="testCases.testCase4"/>
+      <class name="testCases.testCase4"/> -->
       <class name="testCases.testCase5"/>
     </classes>
   </test> <!-- Test -->
