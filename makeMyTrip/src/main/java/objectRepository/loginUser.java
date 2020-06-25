@@ -11,9 +11,9 @@ public class loginUser
 	By userId = By.id("username");
 	By pwd = By.id("password");
 	//By checkBox = By.id("remember");
-	By continueBtn = By.xpath("//*[@id=\"SW\"]/div[2]/div[2]/div[2]/section/form/div[2]/button");
+	By continueBtn = By.xpath("//button[@class='capText font16']//child::span[text()='Continue']");
 	By loginViaPwd = By.xpath("//*[@id=\"SW\"]/div[2]/div[2]/div[2]/section/form/div[3]/a");
-	By loginBtn = By.xpath("//*[@id=\"SW\"]/div[2]/div[2]/div[2]/section/form/div[2]/button/span");
+	By loginBtn = By.xpath("//button[@data-cy='login']//child::span[text()='Login']");
 			
 	public loginUser(WebDriver driver)
 	{

@@ -46,20 +46,20 @@ public class testCase5 extends baseClass
 		excel.getReturnDate();*/
 
 		googlePage gp = new googlePage(driver);
-		gp.enterData().sendKeys("make my trip");
+		/*gp.enterData().sendKeys("make my trip");
 		gp.enterData().sendKeys(Keys.ENTER);
 
 		searchPage sp = new searchPage(driver);
 		Thread.sleep(5000);
-		sp.clickLink().click();
+		sp.clickLink().click();*/
 
 		createAccount ca = new createAccount(driver);
 		loginUser login = new loginUser(driver);
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		ca.clickCreateBtn().click();
 		login.userName().sendKeys(prop.getProperty("loginId"));
-		login.clickContinueBtn().submit();
-		Thread.sleep(11000);
+		login.clickContinueBtn().click();
+		Thread.sleep(5000);
 		//login.clickLoginViaPwd().click();
 		login.userPassword().sendKeys(prop.getProperty("loginPwd"));
 		login.clickLoginBtn().submit();
