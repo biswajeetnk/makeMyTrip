@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import objectRepository.googlePage;
+import objectRepository.loginUser;
 import objectRepository.searchPage;
 import travelSite.baseClass;
 import objectRepository.createAccount;
@@ -24,25 +25,29 @@ public class testCase3 extends baseClass
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
-		googlePage gp = new googlePage(driver);
+		/*googlePage gp = new googlePage(driver);
 		gp.enterData().sendKeys("make my trip");
 		gp.enterData().sendKeys(Keys.ENTER);
 		searchPage sp = new searchPage(driver);
 		Thread.sleep(5000);
-		sp.clickLink().click();
+		sp.clickLink().click();*/
 		
 		createAccount ca = new createAccount(driver);
-		//Select s = new Select(ele);
-		Thread.sleep(10000);
+		loginUser login = new loginUser(driver);
+		Thread.sleep(5000);
 		ca.clickCreateBtn().click();
-		ca.createNewAcct().click();
-		String placeholderValue = ca.enterMobileNo().getAttribute("placeholder");
-		String placeholderValue2 = ca.enterPwd().getAttribute("placeholder");
-		System.out.println("Placeholder Value is : "+placeholderValue);
-		System.out.println("Placeholder value is : "+placeholderValue2);
-		ca.enterMobileNo().sendKeys(prop.getProperty("mobileNumber"));
-		ca.enterPwd().sendKeys(prop.getProperty("pwd"));
-		
+		//String placeholderValue = ca.enterMobileNo().getAttribute("placeholder");
+		//String placeholderValue2 = ca.enterPwd().getAttribute("placeholder");
+		//System.out.println("Placeholder Value is : "+placeholderValue);
+		//System.out.println("Placeholder value is : "+placeholderValue2);
+		login.userName().sendKeys(prop.getProperty("loginId2"));
+		login.clickContinueBtn().click();
+		boolean createButtonEnabled = ca.createAcctBtnSubmit().isEnabled();
+		System.out.println("is Create Account button enabled : "+createButtonEnabled);
+		Thread.sleep(5000);
+		ca.enterPwd().sendKeys(prop.getProperty("loginPwd2"));
+		String enteredPassword = ca.enterPwd().getAttribute("value");
+		System.out.println("The entered password is : "+enteredPassword);
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='tnc']")));
 		//ca.selectCheckBox().click();
 		//System.out.println(ca.selectCheckBox().isSelected());
@@ -50,15 +55,17 @@ public class testCase3 extends baseClass
 		if(ca.selectCheckBox().isSelected())
 		{
 			ca.createAcctBtnSubmit().click();
+			//System.out.println("Create account");
 		}
 		else
 		{
-			System.out.println("Checkbox is not selected");
+			//System.out.println("Checkbox is not selected");
+			ca.selectCheckBox().click();
 		}
 		
-		//System.out.println(ca.userExixtsText().getText());
-		Assert.assertEquals(ca.userExixtsText().getText(), prop.getProperty("userExistsTextExpected"));
+		ca.skipIt().click();
+		//Assert.assertEquals(ca.userExixtsText().getText(), prop.getProperty("userExistsTextExpected"));
 		System.out.println("Test Case 3 executed successfully");
-		driver.close();
+		//driver.close();
 	}
 }

@@ -10,12 +10,14 @@ public class createAccount
 {
 	WebDriver wd;
 	
-	By clickCreateAcocunt = By.xpath("//label[text()='Login with Phone/Email']"); //this needs to be updated with custom xpath
+	By clickCreateAcocunt = By.xpath("//label[text()='Login with Phone/Email']");
 	By clickCreateNewAcct = By.xpath("//button[@class='capText font16']//child::span[text()='Continue']");
 	By enterMobileNumber = By.id("emailOrPhone");
-	By enterPassword = By.id("password");
-	By checkBox = By.id("tnc");
-	By clickCreateBtn = By.cssSelector("button[class*='capText']"); //use css selector * OR ^ OR $
+	By enterPassword = By.cssSelector("input#password");
+	By checkBox = By.cssSelector("input#tnc");
+	By clickCreateBtn = By.xpath("//button[@class='capText font16']//child::span[text()='Create Account']");
+	By clickCreateBtn2 = By.xpath("//button[@class='capText font16']");
+	By skipIt = By.xpath("//p[text()=' Skip ']");
 	By usrAlreadyExistsText = By.xpath("//*[@id='SW']/div[2]/div[2]/div[2]/section/form/div[1]/p/span[2]");
 	
 	
@@ -52,11 +54,16 @@ public class createAccount
 	
 	public WebElement createAcctBtnSubmit()
 	{
-		return wd.findElement(clickCreateBtn);
+		return wd.findElement(clickCreateBtn2);
 	}
 	
 	public WebElement userExixtsText()
 	{
 		return wd.findElement(usrAlreadyExistsText);
+	}
+	
+	public WebElement skipIt()
+	{
+		return wd.findElement(skipIt);
 	}
 }

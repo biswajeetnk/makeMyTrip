@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87322" started-at="2020-06-25T18:41:18Z" finished-at="2020-06-25T18:42:45Z">
+  <suite name="Default suite" duration-ms="27893" started-at="2020-06-26T19:02:42Z" finished-at="2020-06-26T19:03:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="87322" started-at="2020-06-25T18:41:18Z" finished-at="2020-06-25T18:42:45Z">
-      <class name="testCases.testCase5">
-        <test-method status="PASS" signature="search()[pri:0, instance:testCases.testCase5@77cd7a0]" name="search" duration-ms="87286" started-at="2020-06-25T18:41:18Z" finished-at="2020-06-25T18:42:45Z">
+    <test name="Default test" duration-ms="27893" started-at="2020-06-26T19:02:42Z" finished-at="2020-06-26T19:03:10Z">
+      <class name="testCases.testCase3">
+        <test-method status="PASS" signature="accountRegistration()[pri:0, instance:testCases.testCase3@77cd7a0]" name="accountRegistration" duration-ms="27863" started-at="2020-06-26T19:02:42Z" finished-at="2020-06-26T19:03:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-      </class> <!-- testCases.testCase5 -->
+        </test-method> <!-- accountRegistration -->
+      </class> <!-- testCases.testCase3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,4 +1,4 @@
-//search flights from loggedIn page
+//search flights for logged in user
 
 package testCases;
 
@@ -45,8 +45,8 @@ public class testCase5 extends baseClass
 		excel.getReturnMonth();
 		excel.getReturnDate();*/
 
-		googlePage gp = new googlePage(driver);
-		/*gp.enterData().sendKeys("make my trip");
+		/*googlePage gp = new googlePage(driver);
+		gp.enterData().sendKeys("make my trip");
 		gp.enterData().sendKeys(Keys.ENTER);
 
 		searchPage sp = new searchPage(driver);
