@@ -25,12 +25,6 @@ public class testCase4 extends baseClass
 		//WebDriverWait  wait = new WebDriverWait(driver, 15);
 		
 		driver.get(prop.getProperty("url"));
-		/*googlePage gp = new googlePage(driver);
-		gp.enterData().sendKeys("make my trip");
-		gp.enterData().sendKeys(Keys.ENTER);
-		searchPage sp = new searchPage(driver);
-		Thread.sleep(5000);
-		sp.clickLink().click();*/
 		
 		createAccount ca = new createAccount(driver);
 		loginUser login = new loginUser(driver);
