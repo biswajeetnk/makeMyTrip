@@ -10,7 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 import org.apache.commons.io.FileUtils;
 import objectRepository.createAccount;
-import objectRepository.googlePage;
+import objectRepository.makeMyTripPage;
 import objectRepository.loginUser;
 import objectRepository.searchPage;
 import travelSite.baseClass;

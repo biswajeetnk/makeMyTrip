@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30304" started-at="2020-06-29T18:16:17Z" finished-at="2020-06-29T18:16:48Z">
+  <suite name="Default suite" duration-ms="27325" started-at="2020-07-02T18:26:53Z" finished-at="2020-07-02T18:27:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30304" started-at="2020-06-29T18:16:17Z" finished-at="2020-06-29T18:16:48Z">
+    <test name="Default test" duration-ms="27325" started-at="2020-07-02T18:26:53Z" finished-at="2020-07-02T18:27:20Z">
       <class name="testCases.testCase1">
-        <test-method status="PASS" signature="launchGooglePage()[pri:0, instance:testCases.testCase1@77cd7a0]" name="launchGooglePage" duration-ms="30269" started-at="2020-06-29T18:16:17Z" finished-at="2020-06-29T18:16:48Z">
+        <test-method status="PASS" signature="launchGooglePage()[pri:0, instance:testCases.testCase1@77cd7a0]" name="launchGooglePage" duration-ms="27257" started-at="2020-07-02T18:26:53Z" finished-at="2020-07-02T18:27:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchGooglePage -->

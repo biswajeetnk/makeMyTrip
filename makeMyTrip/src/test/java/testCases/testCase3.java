@@ -8,7 +8,7 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import objectRepository.googlePage;
+import objectRepository.makeMyTripPage;
 import objectRepository.loginUser;
 import objectRepository.searchPage;
 import travelSite.baseClass;
@@ -36,7 +36,7 @@ public class testCase3 extends baseClass
 		//System.out.println("Placeholder value is : "+placeholderValue2);
 		login.userName().sendKeys(prop.getProperty("loginId2"));
 		login.clickContinueBtn().click();
-		boolean createButtonEnabled = ca.createAcctBtnSubmit().isEnabled();
+		boolean createButtonEnabled = ca.createAcctBtnSubmit().isSelected();
 		System.out.println("is Create Account button enabled : "+createButtonEnabled);
 		Thread.sleep(5000);
 		ca.enterPwd().sendKeys(prop.getProperty("loginPwd2"));
