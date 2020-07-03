@@ -21,7 +21,7 @@ public class testCase1 extends baseClass
 		driver = initialiseDrivers(); //calling initializeDrivers() method from baseClass.java
 		Thread.sleep(3000);
 		driver.get(prop.getProperty("url"));
-		makeMyTripPage mmtp=new makeMyTripPage(driver);
+		
 		
 		String actualPageTitle = driver.getTitle();
 		System.out.println("The page title is : "+actualPageTitle);
@@ -35,41 +35,11 @@ public class testCase1 extends baseClass
 			System.out.println("actual not equal to expected");
 		}
 		
-		Actions action = new Actions(driver);
-		action.click().build().perform();
+		Actions action = new Actions(driver);//instantiate Actions class
+		String pageUrl = driver.getCurrentUrl();
+		System.out.println("The page URL is : "+pageUrl);
 		
-		mmtp.clickFlights().click();
-		String flightUrl = driver.getCurrentUrl();
-		System.out.println("Flight url : "+flightUrl);
-		
-		mmtp.clickHotels().click();
-		String hotelUrl = driver.getCurrentUrl();
-		System.out.println("Hotel url : "+hotelUrl);
-		
-		mmtp.clickBuses().click();
-		String busUrl = driver.getCurrentUrl();
-		System.out.println("Bus url : "+busUrl);
-		
-		mmtp.clickCabs().click();
-		String cabsUrl = driver.getCurrentUrl();
-		System.out.println("Cabs url : "+cabsUrl);
-		
-		mmtp.clickHolidays().click();
-		String holidaysUrl = driver.getCurrentUrl();
-		System.out.println("Hoidays url : "+holidaysUrl);
-		
-		mmtp.clickTrains().click();
-		String trainUrl = driver.getCurrentUrl();
-		System.out.println("Train url : "+trainUrl);
-		
-		mmtp.clickVillas().click();
-		String villasUrl = driver.getCurrentUrl();
-		System.out.println("Villas url : "+villasUrl);
-		
-		mmtp.clickVisas().click();
-		String visaUrl = driver.getCurrentUrl();
-		System.out.println("Visa url : "+visaUrl);
-		
+			
 		System.out.println("Test Case 1 executed successfully");
 		//driver.close();
 	}

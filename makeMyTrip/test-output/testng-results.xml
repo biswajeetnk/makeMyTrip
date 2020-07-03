@@ -1,17 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27325" started-at="2020-07-02T18:26:53Z" finished-at="2020-07-02T18:27:20Z">
+  <suite name="Default suite" duration-ms="54646" started-at="2020-07-03T18:51:40Z" finished-at="2020-07-03T18:52:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27325" started-at="2020-07-02T18:26:53Z" finished-at="2020-07-02T18:27:20Z">
-      <class name="testCases.testCase1">
-        <test-method status="PASS" signature="launchGooglePage()[pri:0, instance:testCases.testCase1@77cd7a0]" name="launchGooglePage" duration-ms="27257" started-at="2020-07-02T18:26:53Z" finished-at="2020-07-02T18:27:20Z">
+    <test name="Default test" duration-ms="54646" started-at="2020-07-03T18:51:40Z" finished-at="2020-07-03T18:52:35Z">
+      <class name="testCases.testCase2">
+        <test-method status="PASS" signature="launchMMT()[pri:0, instance:testCases.testCase2@3c0ecd4b]" name="launchMMT" is-config="true" duration-ms="49393" started-at="2020-07-03T18:51:40Z" finished-at="2020-07-03T18:52:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchGooglePage -->
-      </class> <!-- testCases.testCase1 -->
+        </test-method> <!-- launchMMT -->
+        <test-method status="PASS" signature="navigateToHolidays()[pri:-1, instance:testCases.testCase2@3c0ecd4b]" name="navigateToHolidays" duration-ms="753" started-at="2020-07-03T18:52:30Z" finished-at="2020-07-03T18:52:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToHolidays -->
+        <test-method status="PASS" signature="navigateToTrains()[pri:0, instance:testCases.testCase2@3c0ecd4b]" name="navigateToTrains" duration-ms="705" started-at="2020-07-03T18:52:31Z" finished-at="2020-07-03T18:52:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToTrains -->
+        <test-method status="PASS" signature="navigateVisas()[pri:0, instance:testCases.testCase2@3c0ecd4b]" name="navigateVisas" duration-ms="962" started-at="2020-07-03T18:52:31Z" finished-at="2020-07-03T18:52:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateVisas -->
+        <test-method status="PASS" signature="navigateToFlight()[pri:1, instance:testCases.testCase2@3c0ecd4b]" name="navigateToFlight" duration-ms="814" started-at="2020-07-03T18:52:32Z" finished-at="2020-07-03T18:52:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToFlight -->
+        <test-method status="PASS" signature="navigateToVillas()[pri:1, instance:testCases.testCase2@3c0ecd4b]" name="navigateToVillas" duration-ms="666" started-at="2020-07-03T18:52:33Z" finished-at="2020-07-03T18:52:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToVillas -->
+        <test-method status="PASS" signature="navigateToCabs()[pri:2, instance:testCases.testCase2@3c0ecd4b]" name="navigateToCabs" duration-ms="404" started-at="2020-07-03T18:52:34Z" finished-at="2020-07-03T18:52:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToCabs -->
+        <test-method status="PASS" signature="navigateToBus()[pri:3, instance:testCases.testCase2@3c0ecd4b]" name="navigateToBus" duration-ms="363" started-at="2020-07-03T18:52:34Z" finished-at="2020-07-03T18:52:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToBus -->
+        <test-method status="PASS" signature="navigateToHotels()[pri:4, instance:testCases.testCase2@3c0ecd4b]" name="navigateToHotels" duration-ms="343" started-at="2020-07-03T18:52:35Z" finished-at="2020-07-03T18:52:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToHotels -->
+        <test-method status="PASS" signature="endOfTestCase()[pri:0, instance:testCases.testCase2@3c0ecd4b]" name="endOfTestCase" is-config="true" duration-ms="1" started-at="2020-07-03T18:52:35Z" finished-at="2020-07-03T18:52:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endOfTestCase -->
+      </class> <!-- testCases.testCase2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
