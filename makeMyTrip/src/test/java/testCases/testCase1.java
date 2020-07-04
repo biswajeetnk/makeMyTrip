@@ -5,6 +5,8 @@ package testCases;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
@@ -14,15 +16,19 @@ import travelSite.baseClass;
 
 public class testCase1 extends baseClass
 {
-	
-	@Test
-	public void launchGooglePage() throws IOException, InterruptedException
+
+	@BeforeTest
+	public void launchMMTPage() throws IOException, InterruptedException
 	{
 		driver = initialiseDrivers(); //calling initializeDrivers() method from baseClass.java
 		Thread.sleep(3000);
 		driver.get(prop.getProperty("url"));
-		
-		
+	}
+
+	@Test
+	public void verifyMmmtPage()
+	{
+
 		String actualPageTitle = driver.getTitle();
 		System.out.println("The page title is : "+actualPageTitle);
 		//Assert.assertTrue(actualPageTitle.contains(prop.getProperty("expectedTitle")), "Actual pass Expected");
@@ -34,17 +40,21 @@ public class testCase1 extends baseClass
 		{
 			System.out.println("actual not equal to expected");
 		}
-		
+
 		Actions action = new Actions(driver);//instantiate Actions class
 		String pageUrl = driver.getCurrentUrl();
 		System.out.println("The page URL is : "+pageUrl);
-		
-			
+
+	}
+
+	@AfterTest
+	public void finishTest()
+	{
 		System.out.println("Test Case 1 executed successfully");
 		//driver.close();
 	}
-	
-	
+
+
 	/*public void success()
 	{
 		System.out.println("Test Case 1 executed successfully");

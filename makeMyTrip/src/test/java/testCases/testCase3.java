@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import objectRepository.makeMyTripPage;
@@ -16,16 +18,25 @@ import objectRepository.createAccount;
 
 public class testCase3 extends baseClass
 {
-@Test	
+
+	@BeforeTest
+	public void launchMMTPage() throws IOException, InterruptedException
+	{
+		driver = initialiseDrivers(); //calling initializeDrivers() method from baseClass.java
+		Thread.sleep(3000);
+		driver.get(prop.getProperty("url"));
+	}
+
+	@Test	
 	public void accountRegistration() throws IOException, InterruptedException
 	{
 		driver = initialiseDrivers();
 		//WebDriverWait wait = new WebDriverWait(driver,10);
 		//WebElement ele = null;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("url"));
-		
+
 		createAccount ca = new createAccount(driver);
 		loginUser login = new loginUser(driver);
 		Thread.sleep(5000);
@@ -45,7 +56,7 @@ public class testCase3 extends baseClass
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='tnc']")));
 		//ca.selectCheckBox().click();
 		//System.out.println(ca.selectCheckBox().isSelected());
-		
+
 		if(ca.selectCheckBox().isSelected())
 		{
 			ca.createAcctBtnSubmit().click();
@@ -56,10 +67,14 @@ public class testCase3 extends baseClass
 			//System.out.println("Checkbox is not selected");
 			ca.selectCheckBox().click();
 		}
-		
+
 		ca.skipIt().click();
 		//Assert.assertEquals(ca.userExixtsText().getText(), prop.getProperty("userExistsTextExpected"));
-		System.out.println("Test Case 3 executed successfully");
+	}
+	@AfterTest
+	public void finishTest()
+	{
+		System.out.println("Test Case 1 executed successfully");
 		//driver.close();
 	}
 }

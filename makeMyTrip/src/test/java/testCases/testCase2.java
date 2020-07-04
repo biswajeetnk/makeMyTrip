@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.SkipException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -31,12 +32,13 @@ public class testCase2 extends baseClass
 	}
 
 	@Test(priority=1)
-	public void navigateToFlight()
+	public void navigateToFlight() 
 	{
 		mmtp = new makeMyTripPage(driver);
 		mmtp.clickFlights().click();
 		String flightUrl = driver.getCurrentUrl();
 		System.out.println("Flight url : "+flightUrl);
+		throw new SkipException("This test has been skipped");
 	}
 
 	@Test(priority=4)
@@ -102,11 +104,11 @@ public class testCase2 extends baseClass
 		System.out.println("Visa url : "+visaUrl);
 	}
 
-	@AfterTest
-	public void endOfTestCase()
+	@AfterTest(enabled=false)
+	public void finishTest()
 	{
-		System.out.println("Test Case 2 excuted successfully - able to click MakeMyTrip URL");
-		//.driver.close();
+		System.out.println("Test Case 2 executed successfully");
+		//driver.close();
 	}
 
 }

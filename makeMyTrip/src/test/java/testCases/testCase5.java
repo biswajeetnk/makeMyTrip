@@ -5,6 +5,8 @@ package testCases;
 import java.io.IOException;
 
 import org.openqa.selenium.Keys;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import objectRepository.searchPage;
@@ -18,13 +20,18 @@ import objectRepository.searchFlights;
 public class testCase5 extends baseClass
 {
 
+	@BeforeTest
+	public void launchMMTPage() throws IOException, InterruptedException
+	{
+		driver = initialiseDrivers(); //calling initializeDrivers() method from baseClass.java
+		Thread.sleep(3000);
+		driver.get(prop.getProperty("url"));
+	}
+
+
 	@Test
 	public void search() throws IOException, InterruptedException 
 	{
-
-		driver = initialiseDrivers();
-		driver.get(prop.getProperty("url"));
-
 		/*testCase1 tc1 = new testCase1();
 		tc1.launchGooglePage();
 
@@ -127,9 +134,15 @@ public class testCase5 extends baseClass
 
 		Thread.sleep(5000);
 		sf.clickSrchBtn().click();
-		System.out.println("TC 5 executed successfully");
-		//addede tc5
 
+	}
+	
+	
+	@AfterTest
+	public void finishTest()
+	{
+		System.out.println("Test Case 1 executed successfully");
+		//driver.close();
 	}
 
 }
